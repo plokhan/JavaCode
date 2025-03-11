@@ -1,0 +1,30 @@
+*******************************************27th Jan
+
+- $ Variable $
+
+- Class lavel varbale  or static variable:-
+
+ - before variable "static" is their then it is class level variable.
+
+   ex:- class Student {
+          int id;              --> three are intanse variable
+          String name;   --> three are intanse variable
+           String course;  --> three are intanse variable
+           static String resultdate;  --> class level variable
+          }  
+
+ - for instance varibel can able to create two or more copy but for class level varibale or static variable  unable to create the copy 
+ - instance varibale only create when object are created 
+ - without object we can able to use the static variable so that we can save the memory.
+ - instance variable have the different value for different object as well for different varibale  and must have the value.
+ - But static varibale have same value for different object and able to create only one copy
+ - static variable is not depend on object 
+ - intanse variable is depend on object
+ - we can use the static varible through the copy object.
+    Client m1 = new Client();
+	
+	System.out.println(m1.maxmarks);
+	
+ - static variable memoryis create on hip after java 1.8    before 1.8 memory is created in method area
+ - Static variable has same memory for different method  and changes has been happen in the same memory
+ - Declare the static vatibale by its class name (best pratice) 
