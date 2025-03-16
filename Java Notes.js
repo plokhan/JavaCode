@@ -532,8 +532,9 @@ Abstracton
   if don't want to implement the abstract method then child class also be keep as abstract.
 - Can't able to create object of bastract class.
 	  
-Q. Why we want to do this abstract class.
-R. 
+Q. Why we want to do this abstract method.
+R. While implementing the child class their might me possibility to miss it the method that why we create the abstract method.
+	
 
 
 
