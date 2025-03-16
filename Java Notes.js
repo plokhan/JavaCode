@@ -528,9 +528,22 @@ Abstracton
 - Can able to create refernce of abstract class.
 
 - implementation changes as per the class then we use the abstract method in parent class.
-
+- In abstract class abstract method must have to implement in child class shows error 
+  if don't want to implement the abstract method then child class also be keep as abstract.
+- Can't able to create object of bastract class.
+	  
 Q. Why we want to do this abstract class.
-R. 	
+R. 
+
+
+
+
+
+
+
+
+
+
 
  
 
