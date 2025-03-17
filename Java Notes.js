@@ -504,9 +504,11 @@ Q. What is overriding and dynamic dispatch and difference between them?
 R. Overriding is a rewriting of new code.
    Dynamic Dispatch calling a code which is overriden.
 
+- Dynamic binding is also called as Runtime Binding   
 
-Dynamic binding is also called as Runtime Binding   
-
+- For overriding inheritance is must
+- Signature must be same
+- Cannot reduce the access.
 --- Image - - refer the screenshort from pc Polymorphism
 
 Q. Can we override Static Method ? Can Do the Dynamic Dispatch?
@@ -514,7 +516,11 @@ R. No, clas level method can't override so can't able to do dynamic dispatch
 
 ****************************7 March
 Abstracton
+Q. What is Abstraction
+R. Focusing and expose essential Details
 
+Q. Why we need to do the abstraction
+R. 
 - The class in which code is not present then it is called as Abstracton 
 
 - In class having one abstract method  then have to write abstract of class.
@@ -534,9 +540,82 @@ Abstracton
 	  
 Q. Why we want to do this abstract method.
 R. While implementing the child class their might me possibility to miss it the method that why we create the abstract method.
+
+*******************************17th March
+- Two Types to Do Abstraction
+
+	1. By using abstract  --> by using  -->  public abstract class A
+	2. By using interfaces --> by using --> public interface X
+
+-Abstract class contain instance varibale,constructor , non abstract method 
+- In Interface class does not contain the instance varibale,constructor , non abstract method  as well 
+		--> int id ; 
+		    int bal;
+-Interface class allows abstract method 
+- Can not create the object in interface class but able to give the referances 
+- Interface allow constants variable and abstract method 
+
+Q. Is interface class allow int xyz =0 ;
+R. Yes, 
+	int xyz = 0;   // It looking like public static final int xyz =0 ;  --> it is constant variable
+
+Q. Is interface class allow void m1() (abstract method);
+R.Yes , 
+	void m1(); // It looking like  public abstract void m1();
+
+- implements is as same as inheritance
+   public class X implements I1, I2{
+	   
+   };
+
+Q. What is concret method?
+R. The method which having implementation 
+
+ex:- public m2();{
+	System.out.prinln("m1");   --> implementation
+}
+
+- Mutiple inheritance achieve by implementation in java if needed.
+
+Q. Why do the interface?
+R. To achieve abstractions
 	
+- Interfaces allows  constants and abstract methods.
+- Methods in the interface are by default public and abstract. 
+	
+Q. Where we use the Interface and Abstraction?
+R. Interface can use when need to declare method two different unrelated class. 
+   Abstraction Can use when need to declare method from two different related class.
 
+- If class having varibale, abstract method, non-abstract method then we use the abstraction.
+	if class having some method are implemented and some are non-implementation then use the abstraction.  
+- If class having abstract class then use the interface 
+	
+Q. When to use the Interface and Abstraction?
+R.Interface can use when need to declare method two different unrelated class.
+  Abstraction can use to expose required details in subclass.
 
+- A class extend single class but can implement multiple interfaces.
+
+	public class X extends B implements P,Q,R {
+								--> CORRECT
+	}
+
+public class X extends A,B implements P,Q,R {
+								--> IN-CORRECT
+	}
+
+- interface class never extends the class ( becz if class having non-abstraction )
+- interface can only extends interface not implements interface -->  interface R extends P
+- interface can extends mutiple interface --> interface R extends P,Q
+- Class can extends class and implement mutiple interface
+- Class can not extends interface 
+ 
+**********************************18th March
+
+Q. Can we create object of interface?
+
+Q.Can we create reference of interface?
 
 
 
@@ -547,6 +626,8 @@ R. While implementing the child class their might me possibility to miss it the 
 
 
  
+
+
 
 
 
