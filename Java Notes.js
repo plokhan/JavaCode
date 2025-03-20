@@ -617,9 +617,21 @@ Q. Can we create object of interface?
 
 Q.Can we create reference of interface?
 
-**********************************19 th march
+**********************************19 th march (Read and Write)
+Reading And Writing 
+- To create file  File f = new File ("nameOfTheFile) --> using the file class of java which is already created 
 
-**********************************20th march
+- When we use the writing operation use the outputStream
+
+	FileOutputStream  fos = new FileOutputStream(f );
+
+- When use the reading operation use the InputStream
+	FileInputStream fis = new FileInputStream(f);
+	
+-to write the data in FileOutputStream use the write method as -->    fos.write(variableName);
+- to read the data use the read method  --> fis.readAllBytes();
+- to convert the into String --> String res = new String (storeVariableName);
+*********************************20th march
 
 
 
