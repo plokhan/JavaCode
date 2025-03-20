@@ -626,11 +626,18 @@ Reading And Writing
 	FileOutputStream  fos = new FileOutputStream(f );
 
 - When use the reading operation use the InputStream
+
 	FileInputStream fis = new FileInputStream(f);
 	
 -to write the data in FileOutputStream use the write method as -->    fos.write(variableName);
+
 - to read the data use the read method  --> fis.readAllBytes();
+
 - to convert the into String --> String res = new String (storeVariableName);
+
+- to write character by character by using the FilWriter class --> FileWriter fw = new FileWriter(f);
+
+- to read the character use the Filerredaer class --> FilerRedaer fr = new FileReader(f);
 *********************************20th march
 
 
