@@ -617,6 +617,10 @@ Q. Can we create object of interface?
 
 Q.Can we create reference of interface?
 
+**********************************19 th march
+
+**********************************20th march
+
 
 
 
