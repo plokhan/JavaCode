@@ -747,7 +747,23 @@ Example of Expectional
 												kese ho..
 		
 		System.out.println("kese ho..");
-		
+
+- Expectional Handaling Mechanism
+
+		Trowable
+		   |
+		Expection
+	  	  |
+RuntimeExpection
+		IndexOutOfExpection
+
+
+
+- The expection which is not check at the runtime  is called as unchecked expectional  ex:- ArrayIndexOutOfBoundExpection, StringIndexOutOfBoundExpection
+- The expection show in runtime forcefully is called checked expectonal 
+- try and catch is used for the checked expection.
+- Is expection created by us is called custom expection
+- From error cannot be recovery but for expectional have recovery.
 *********************************24th march
 
 
