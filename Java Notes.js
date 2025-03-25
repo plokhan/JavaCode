@@ -640,6 +640,116 @@ Reading And Writing
 - to read the character use the Filerredaer class --> FilerRedaer fr = new FileReader(f);
 *********************************20th march
 
+*********************************21st march
+Expectional Handaling
+Have to option 1. throws expectionl and 2. try and catch
+- try or catch
+	ex:- if try to open file if it is not open then use the expectional habadaling
+
+		try {
+			here sensetive code 
+		}
+		  catch ( hereIsexpectional ){
+			 e.printStackTrace();  
+		  }
+			syso("bye bye ...")
+
+- Catch blck is a handler 
+- in try block write the execution code.
+	
+Q. What is  e.printStackTrace();  represent in catch block
+R. It represent information of the expectional on particular line 
+
+   ex:- java.lang.ArithmeticException: / by zero
+	at expectionalHandaling/com.expectionalHandaling.A.main(A.java:13)
+
+       Here java create a object of
+	      // ArithmeticExpectional e = new Arithmetic Expectional();
+		// by zero 
+		// line 13 com.expectionalHandaling.A
+		// thorw e
+
+If we didn't write this in catch block then we can't see the expectional thorws on with line 
+in console.
+
+Q. What is Expectional in java ?
+R. 
+
+Q. What is the use of expectional in Java
+R. With the help of expectional in java so the prograam is not terminated.
+
+
+Example of Expectional 
+
+1. Arithmetic Exception
+
+	        int a =10;
+		int b =0;
+		
+		try {
+			
+			
+			int r =a/b;
+			System.out.println(r); // ArithmeticExpectional e = new Arithmetic Expectional();
+			// by zero 
+			// line 13 com.expectionalHandaling.A
+			// thorw e
+		}
+		catch(ArithmeticException e) {
+			
+			e.printStackTrace();            		    o/p:- java.lang.ArithmeticException: / by zero
+										at expectionalHandaling/com.expectionalHandaling.A.main(A.java:13)
+										bye bye ....
+			
+		}
+		System.out.println("bye bye ....");
+
+
+2.Expectional in Array out of bounds
+		
+		int c[]= {3,5,6,87,89,90,};
+		
+		try {
+			System.out.println(c[50]); // ArrayIndexOutOfBoundsExpectional e = new ArrayIndexOutOfBoundsExpectional ();
+			                          // index 50 is out of bunds for length 6
+			                          // line 10 com.expectionalHandaling.A  (package name and class name)
+						//  throws e
+			
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			
+			e.printStackTrace();
+		}			          o/p:- java.lang.ArrayIndexOutOfBoundsException: Index 50 out of bounds for length 6
+							at expectionalHandaling/com.expectionalHandaling.A.main(A.java:30)
+							Hello
+		
+		System.out.println("Hello");
+		
+	}
+
+
+3. 
+
+	String s ="hello";
+		
+		try {
+			
+			System.out.println(s.charAt(100));
+		}
+		catch(StringIndexOutOfBoundsException e) {
+			
+			e.printStackTrace();                
+		}
+		                                              				  o/p:- java.lang.StringIndexOutOfBoundsException: String index out of range: 100
+												at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+												at java.base/java.lang.String.charAt(String.java:1517)
+												at expectionalHandaling/com.expectionalHandaling.A.main(A.java:44)
+												kese ho..
+		
+		System.out.println("kese ho..");
+		
+*********************************24th march
+
 
 
 
