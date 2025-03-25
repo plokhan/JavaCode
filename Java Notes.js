@@ -638,6 +638,9 @@ Reading And Writing
 - to write character by character by using the FilWriter class --> FileWriter fw = new FileWriter(f);
 
 - to read the character use the Filerredaer class --> FilerRedaer fr = new FileReader(f);
+
+Q. What is use of fos.close();
+R. Acquire resource To free the memory 
 *********************************20th march
 
 *********************************21st march
@@ -647,15 +650,18 @@ Have to option 1. throws expectionl and 2. try and catch
 	ex:- if try to open file if it is not open then use the expectional habadaling
 
 		try {
-			here sensetive code 
+			here sensetive code (means have chance to come the expection)
 		}
 		  catch ( hereIsexpectional ){
 			 e.printStackTrace();  
+		  }finally{
+			syso("bye bye ...")  
 		  }
-			syso("bye bye ...")
+			
 
 - Catch blck is a handler 
 - in try block write the execution code.
+- finally block is run to clean the resource (memory)
 	
 Q. What is  e.printStackTrace();  represent in catch block
 R. It represent information of the expectional on particular line 
@@ -750,16 +756,21 @@ Example of Expectional
 
 - Expectional Handaling Mechanism
 
-		Trowable
-		   |
-		Expection
-	  	  |
-RuntimeExpection
-		IndexOutOfExpection
+					Trowable
+					   |
+					Expection
+	  				   |
+RuntimeExpection (unchecked expection)               IOExpection (checked expection)
+		                |
+			IndexOutOfBundsExpection
+				|
+ArrayOutOfBoundsExpection    StringOutOfBoundExpection
 
 
 
 - The expection which is not check at the runtime  is called as unchecked expectional  ex:- ArrayIndexOutOfBoundExpection, StringIndexOutOfBoundExpection
+						This expection is the child of runtimeexpection
+							
 - The expection show in runtime forcefully is called checked expectonal 
 - try and catch is used for the checked expection.
 - Is expection created by us is called custom expection
