@@ -760,6 +760,8 @@ Example of Expectional
 					   |
 					Expection
 	  				   |
+				     ___	___
+				    |		   |
 RuntimeExpection (unchecked expection)               IOExpection (checked expection)
 		                |
 			IndexOutOfBundsExpection
