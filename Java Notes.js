@@ -878,10 +878,74 @@ R.
 Hands on Expection handling
 
 
-**********************26th march
+**********************26th march & 27th march
 Collection API
+- Array list 
+To crate group of object can be use Array list
+
+- Data Structure :- 
+
+	
+1. ArrayList:
+
+   ArrayList<Product> al = new ArrayList<Product>();
+		|			     |
+	     objectName			  objectName
+
+- to add in the array list then :
+
+   	al.add(p1);
+	al.add(p2);
+	al.add(p3);
+
+   It is maintin the insertion order
+   It can add the duplicate 
+   It allow mutiple null value
+   It good in read operation.
+   It downlist in adding in between index
+
+2. LinkedList : 
+
+ LinkedList<Product> al = new LinkedList<>();
+
+   It is maintin the insertion order
+   It can add the duplicate 
+   It allow mutiple null value
+
+3. HashSet :
+
+HashSet<Product> al = new HashSet<>();
+
+It not maintain the insertio order (not having index)
+It not allow the duplication
+It gives the uniqueness
+
+4. LinkedHashSet:
+
+It maintain the insertion order
+It gives the uniqueness
+It not allow the duplication
+
+5. 
 
 
+- To print in a all list then:
+
+	For(Product t : al)
+	syso(t)
+- Collection and package in java is implementation of data Structre 
+
+Q. What is the different between ArrayList & LinkedList?
+R. With the use of LinkeList  can do the insertion and deletion very easly
+   To read entire data use the ArrayList. With the help of ArrayList can do insertion and deletion not easily.
+
+
+Q. What is Hashing
+R. To find out the object from the large dataset.
+	
+Q. What is the difference of HashSet and LinkedSet?
+R. Both are same but in linkedset maintain the insertionn order    
+   But in hashset insertion order is not maintain.
 
 	
 
