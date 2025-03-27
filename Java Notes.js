@@ -643,6 +643,7 @@ Q. What is use of fos.close();
 R. Acquire resource To free the memory 
 *********************************20th march
 
+	
 *********************************21st march
 Expectional Handaling
 Have to option 1. throws expectionl and 2. try and catch
@@ -653,15 +654,16 @@ Have to option 1. throws expectionl and 2. try and catch
 			here sensetive code (means have chance to come the expection)
 		}
 		  catch ( hereIsexpectional ){
-			 e.printStackTrace();  
-		  }finally{
+			 e.printStackTrace();  (expectional Handler) 
+		  }finally{   
 			syso("bye bye ...")  
 		  }
 			
 
-- Catch blck is a handler 
+- Catch blck is a expection handler 
 - in try block write the execution code.
-- finally block is run to clean the resource (memory)
+- finally block is run to clean the resource ( memory).The finally Block is used 
+  to execute important code regardless of whether an exception occurs or not.
 	
 Q. What is  e.printStackTrace();  represent in catch block
 R. It represent information of the expectional on particular line 
@@ -678,11 +680,19 @@ R. It represent information of the expectional on particular line
 If we didn't write this in catch block then we can't see the expectional thorws on with line 
 in console.
 
-Q. What is Expectional in java ?
-R. 
+Q. What is Expection in java ?
+R. An Exception is an unwanted or unexpected event that occurs during the execution of a program (i.e., at runtime)
+  and disrupts the normal flow of the program’s instructions.
 
+Q. What is expectional Handling?
+R. Exception handling in Java allows developers to manage runtime errors effectively by using mechanisms like
+   try-catch block, finally block, throwing Exceptions, Custom Exception handling, etc.
+	   
 Q. What is the use of expectional in Java
 R. With the help of expectional in java so the prograam is not terminated.
+
+Q. What is the advantage of Expection?
+R. Expection will provide informationabout the problem is occur and location of the problem.
 
 
 Example of Expectional 
@@ -763,21 +773,122 @@ Example of Expectional
 				     ___	___
 				    |		   |
 RuntimeExpection (unchecked expection)               IOExpection (checked expection)
-		                |
-			IndexOutOfBundsExpection
-				|
-ArrayOutOfBoundsExpection    StringOutOfBoundExpection
+		                |		     SQLExpection
+			NullPointerExpection	     FileNotFoundExpection		
+			IndexOutOfBundsExpection     ClassNotFoundExpection
+			ArrayOutOfBoundsExpection  
+			StringOutOfBoundExpection
 
 
 
-- The expection which is not check at the runtime  is called as unchecked expectional  ex:- ArrayIndexOutOfBoundExpection, StringIndexOutOfBoundExpection
+- The expection which is check at the runtime  is called as unchecked expectional  ex:- ArrayIndexOutOfBoundExpection, StringIndexOutOfBoundExpection
 						This expection is the child of runtimeexpection
 							
-- The expection show in runtime forcefully is called checked expectonal 
+- The expection show in complie time forcefully is called checked expectonal 
 - try and catch is used for the checked expection.
 - Is expection created by us is called custom expection
 - From error cannot be recovery but for expectional have recovery.
 *********************************24th march
+Expection Handling
+
+- unchecked expection is descendant of RuntimeExpection
+- Throwable is a class
+- Throwable list direct child of Throwable
+  Error and expection
+
+- Custom Expection Or User Expection.
+ The user or developer made the expection for their code then it is called Custom Expection
+
+Q. how to create checked expection and unchecked expection
+R. The custom expection class has to been extends the Expection class then it is a checked expection.
+   The custom expection class has to been extends the RuntimeExpection then it is a unchecked expection.
+	
+	$ Example for Custom unchecked Expection $  
+
+public class NegativePriceExpection extends RuntimeException {
+
+	@Override
+	public String toString() {
+		return "NegativePriceExpection" + "(Price is negative)";
+	}
+
+	
+}
+
+
+	$ Example for checked expection $
+
+public class MinBalanceExpection extends Exception {
+
+	@Override
+	public String toString() {
+		return "MinBalanceExpection [] : balance is less than you asked for";
+	}
+
+	
+}
+
+To Throw in code
+
+public static void main(String[] args) {
+		
+		double price  = -70;
+		 
+		try {
+		if (price <0)
+			throw new NegativePriceExpection();
+		System.out.println("Try");
+		}
+		catch (NegativePriceExpection e) {
+			e.printStackTrace();
+			System.out.println("Catch");
+		}
+		System.out.println("Bye bye ...");
+	}
+
+If custom expection is unchecked then no need the try & catch block. 
+If cutom Expection is checked then it is required the try & catch block.
+
+
+- Exception Hierarchy
+Expection Hierarchy must be manintain
+Always smaller expection at above likewise,
+	
+	catch (FileNotFoundExpection e){
+	
+	}
+	catch(IOExpection e){
+		
+	}
+	catch(NullPointerExpection e){
+		
+	}
+	catch(Expection e){
+		
+	}
+
+Q. How to load the class
+R. By using the Class.forName
+like Class.forName("packagename.ClassName")
+
+Q. What is expection propogation?
+R.
+
+*************************25th March
+Hands on Expection handling
+
+
+**********************26th march
+Collection API
+
+
+
+	
+
+
+
+
+
 
 
 
