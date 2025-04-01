@@ -947,7 +947,7 @@ R. Both are same but in linkedset maintain the insertionn order
    But in hashset insertion order is not maintain.
 
 
-**********************************************28th March Collection of API
+**********************************************28th March and 30th March Collection of API
 - Collection of API are interface to achieve abstraction
 
 5.Vector  
@@ -964,6 +964,7 @@ Vector <Product> al = new Vector<>();
 
 - sorted base on criteria
 - doesn't take null value
+
 
 
 I.Q. Difference between ArrayList LinkedList And Vector
@@ -990,6 +991,70 @@ Interface Iterator
 	    * + add()
 	    * + removeAll
 	    * + size 
+
+
+
+7. HashMap
+
+	HashMap<Integer, String> hmap = new  HashMap<Integer , String>();
+
+Integer are key and String is value
+
+- keys are unique it cannot be duplicate, key should be charachtr, object
+- HashMap deal with the wapper classes don't deal with integers (i)
+- It is different from collection iterable.
+- Values is in collection.
+
+
+Q. What happen when keys are same ?
+R. On that key old value replace by thr new value.
+
+- To show the key in HashMap
+  
+	Set<Integer> keys =  hmap.keySet();
+	   
+	   for (Integer t: keys)
+		   System.out.println(t);
+
+- To show the value in HashMap
+
+	Collection<String> values = hmap.values();
+			   
+			   for(String s :values)
+				   System.out.println(s);
+
+- To print the Value by using forEach
+
+ hmap.forEach((k,v) ->System.out.println((k + " "+ v)));
+
+- To show the entries ( 34 , "aditi");
+    
+	Set <Entry <Integer , String> >  entries  = hmap.entrySet();
+entries.forEach(entry -> System.out.println(entry.getKey() + "  " + entry.getValue()));
+
+- To get value on particular  Key 
+	System.out.println(hmap.get(40));
+			
+- the pair of key and value becomes Entries and group of entries called Set
+
+
+Q. What is the advantage of HashMap?
+R. If to findout the record from too many dataset.
+
+	Hasmap extends Map(in map store data in entries and in collection store the data in loop)
+	
+8. LinkedHashMap
+
+- LinkedHashMap maintain the insertion order
+
+
+9. TreeHashMap 
+
+	TreeMap<Integer, Integer> map = new TreeMap<>();
+	
+- To get sorted on the basis of key use the treeHashMap.  
+- Methods are similar as HashMap.
+
                
 
 
