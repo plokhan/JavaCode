@@ -874,15 +874,14 @@ like Class.forName("packagename.ClassName")
 Q. What is expection propogation?
 R.
 
-*************************25th March
+*************************25th March  
 Hands on Expection handling
 
+*******************************************26th and 26th Collection of API
 
-**********************26th march & 27th march
-Collection API
-- Array list 
-To crate group of object can be use Array list
 
+	
+	
 - Data Structure :- 
 
 	
@@ -926,7 +925,7 @@ It maintain the insertion order
 It gives the uniqueness
 It not allow the duplication
 
-5. 
+
 
 
 - To print in a all list then:
@@ -946,6 +945,54 @@ R. To find out the object from the large dataset.
 Q. What is the difference of HashSet and LinkedSet?
 R. Both are same but in linkedset maintain the insertionn order    
    But in hashset insertion order is not maintain.
+
+
+**********************************************28th March Collection of API
+- Collection of API are interface to achieve abstraction
+
+5.Vector  
+
+Vector <Product> al = new Vector<>();
+
+- It is a thread safe (means at a time only use one thread).
+- Not completely thread safe but maximum it is safe.
+- methods are identical
+- Vector is slow as per array but reliability 
+- methods of vector are synchronized
+
+6. TreeSet
+
+- sorted base on criteria
+- doesn't take null value
+
+
+I.Q. Difference between ArrayList LinkedList And Vector
+
+	
+Q. What is difference between Vector as comapre to ArrayList and LinkdList
+R. Methods Are same in vector related to Arrayist and LinkedList
+
+- Collection can extends the iterable 
+
+  <<interface>>
+Interface Iterator 
+* foreach()
+*Iterator()
+*splitIterator() 
+	^
+	|__________
+	 	   |
+               <<interface>>
+	     Interface collection
+            * + foreach()
+	    * + iterator()
+	    * + splitIterator()
+	    * + add()
+	    * + removeAll
+	    * + size 
+               
+
+
 
 	
 
