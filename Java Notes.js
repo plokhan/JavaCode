@@ -973,6 +973,9 @@ I.Q. Difference between ArrayList LinkedList And Vector
 Q. What is difference between Vector as comapre to ArrayList and LinkdList
 R. Methods Are same in vector related to Arrayist and LinkedList
 
+Q. when will the LinkedList use?
+R. Used when frequently insertion and deletion at particular index.
+
 - Collection can extends the iterable 
 
   <<interface>>
@@ -1054,6 +1057,44 @@ R. If to findout the record from too many dataset.
 	
 - To get sorted on the basis of key use the treeHashMap.  
 - Methods are similar as HashMap.
+
+
+*****************************************1 April
+
+10. TreeSet 
+
+11. ArrayList
+
+- maintain inserrtion order
+
+* Methods : - 
+1. stream 
+
+
+		al.stream().forEach(s -> System.out.println(s));
+
+- work only wrapper class and object
+- It wrokable in all collection API
+
+2. filter
+
+	al.stream().filter(s -> s>50).forEach(s -> System.out.println(s));
+
+
+************************************2nd April Sorting
+
+Comaparable  interface 
+- comapreTo (Single Parameter)
+- in wapper class and String already implements the comparable
+
+compparator  interface 
+
+                         compare(two paramtere)
+- can not affect the class
+- no limitation to apply the comparator
+
+
+
 
                
 
