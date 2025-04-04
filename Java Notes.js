@@ -1174,8 +1174,44 @@ System.out.println("-----By Name");
 		Collections.sort(al, new ProductPriceComparator());
 		al.forEach(s -> System.out.println(s));
 
+*******************************************4 April Thread
+
+If we neeed to use the thread use the start method.
+ex: - 
+	Thread t1 = new Thread(job);
+	Thread t2 = new Thread(job);
+
+	t1.start();
+	t2.start();
+Q. What is Thread ?
+R. To sagrigate the work in parts at same time to done the task
+
+* Issue with thread -
+	
+
+Note :- syso is a IO file 
+
+Q. Where to use the Thread?
+
+Q. What is the advantage of Thread?
+R. Multiple job will run simutanously. Multi Tasking , increase the keyaspect
 
 
+
+- One thread execute only for once can't restart it.
+
+
+Ex:- 
+	public class JobA implements Runnable {
+
+	@Override
+	public void run() {
+		for(int i = 1 ; i<=20 ; i++)
+			if(i%2 ==0)
+				System.out.println(i);
+	}
+
+}
 
                
 
