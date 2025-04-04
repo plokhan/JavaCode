@@ -1083,15 +1083,96 @@ R. If to findout the record from too many dataset.
 
 ************************************2nd April Sorting
 
-Comaparable  interface 
+1. Comaparable  interface 
 - comapreTo (Single Parameter)
 - in wapper class and String already implements the comparable
 
-compparator  interface 
 
-                         compare(two paramtere)
+public class Product implements Comparable <Product> {
+	
+
+@Override
+	public int compareTo(Product o) {
+		
+		Double price1 = this.price;
+		Double price2 = o.price;
+		
+		return price1.compareTo(price2);
+	}
+
+}
+
+
+
+For Integer ->
+
+	@Override
+	public int compareTo(Product o) {
+		Double price1 = this.price;
+		Double price2 = o.price;
+		
+		String name1 =this.name;
+		String name2 = o.name;
+		
+		Integer id1 = this.id;
+		Integer id2 =  o.id;
+		
+		return id1.compareTo(id2);
+	}
+
+
+- return statment can also be wriiten as
+	
+  	return new Integer (this.id).compareTo(o.id);
+
+
+   Sort the object on the basis of price
+
+
+
+2.compparator  interface 
+
+ compare(two paramtere)
+
+Create a class like this
+	
+public class ProductPriceComparator {
+
+}
+
+Product = class name 
+Price = variable for which have to sortout
+Comparator  = for this class is a comparator
+
+	
 - can not affect the class
 - no limitation to apply the comparator
+
+* Comparator Class-- 
+public class ProductPriceComparator  implements Comparator<Product> {
+
+	
+	@Override
+	public int compare(Product o1, Product o2) {
+		String a1 = o1 .getName();
+		String a2 = o2.getName();
+		return a1.compareTo(a2);
+	}
+	
+}
+
+* To call in main class
+
+System.out.println("-----By Name");
+		Collections.sort(al, new ProductNameComparator());
+		al.forEach(s-> System.out.println(s));
+
+
+
+		System.out.println("---By Price");
+		
+		Collections.sort(al, new ProductPriceComparator());
+		al.forEach(s -> System.out.println(s));
 
 
 
