@@ -1174,7 +1174,7 @@ System.out.println("-----By Name");
 		Collections.sort(al, new ProductPriceComparator());
 		al.forEach(s -> System.out.println(s));
 
-*******************************************4 April Thread
+*******************************************4 April  Thread
 
 If we neeed to use the thread use the start method.
 ex: - 
@@ -1213,17 +1213,108 @@ Ex:-
 
 }
 
-               
+*****************************7 April HandsOn Thread      
+
+	
+	
+- For one class --> one object mutiple thread we can create 
+
+	 ex:-  
+		 JobEven jobEven =new JobEven();	
+		Thread t1 = new  Thread(jobEven);
+		Thread t2 = new Thread(jobEven);
+		Thread t3 = new Thread(jobEven);
 
 
+- One class --> mutiple object  -> mutiple thread can created 
+
+ex: - 
+	JobEven jobEven3=new JobEven();
+		JobEven jobEven4 =new JobEven();
+		JobEven jobEven5 =new JobEven();
+	
+		JobSum jobSum = new JobSum();
+
+		Thread t3 = new Thread(jobEven3);
+		Thread t4 = new Thread(jobEven4);
+		Thread t5 = new Thread(jobEven5);
+		
+		Thread t6 = new Thread(jobSum);
+		t3.start();
+		t4.start();
+		t5.start();
+		t6.start();
+
+Note:- 	One Thread can execute only once 
+
+-To get the name throught the thread 
+	System.out.println( Thread.currentThread().getName()+" "+ i);
+
+- As per our convinent use the setName() method
+
+	ex: - Thread t1 = new  Thread(jobEven);
+		t1.setName("t1"); // here we give the name to the thread
+		t1.start();
+
+- Use the join the method to complete the thread then push to other part of code 
+it thows the expection of InterruptedException
+		t2.join();
+		t3.join();
+		t4.join();
+
+- Thread.currentThread().sleep(1000);   1000 is milisecond   1000 = 1sec
+		use is thread takke the 1sec of break 
+
+its shows the check expection so have to use the try catch block
+			try {
+				Thread.currentThread().sleep(1000);
+			} catch (InterruptedException e) {
+				
+				e.printStackTrace();
+			}
+
+
+
+-  To increasse the priority use the setPriority() method
+
+	t2.setPriority(10);
+
+Max priority is 10  --> more priority
+Min priority is 1  --> less priority
+Default priority is 5  to use default use the ' Thread.NomPriority(); '
+
+this all the are the priority is a requst not a method
+
+- activeCount() is use for to know how many thread is running
+
+	ex:- System.err.println(Thread.activeCount());
+
+- setDaemon(true) - time is runing is daemon thread. Long runing task also called as background thread
+  checking the thread how much reamning and show the completed thread
 
 	
 
+Thread: 
+		override run() method by  using Runnable interface.
+
+		start(): thread is ready for execution and start executing
+		join();
+		setName(" ");
+		getName();
+		currentThread();
+		activecount();
+		sleep(1000);
+		setPriority
+		getPriority
 
 
+	MIN_Priority
+	Max_Priority
 
 
-
+***********************************************
+		
+		
 
 
 
