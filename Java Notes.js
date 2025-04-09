@@ -1310,9 +1310,13 @@ Thread:
 
 	MIN_Priority
 	Max_Priority
+********************************************** 8th April Handson Thread
 
+*********************************************** 9th April Potentail of Java 8
+Q. What is fuctional interfce?
+R. Minimun and maximun abstract method that interface is fuctional interface
 
-***********************************************
+Single tomn proxy obersrval
 		
 		
 
