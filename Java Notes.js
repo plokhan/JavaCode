@@ -1372,12 +1372,43 @@ list.stream().forEach(s -> System.out.println(s.toUpperCase()));
 String s[] = {"Hello" , "Hi" , "Bye"};
 
 Arrays.stream(s).forEach(n -> System.out.println(n.toUpperCase()));
-	
 
 
+*********************************14 Leave And 15th April
+Persistent Storage, Client Server Communication, Ports, Roundtrip
+
+- Server
+  Has two type 
+  1. Hardware server
+  2. Software servers
+  3. App Servers
+
+- Model View controller (MVC)	Model - communicating with data 
+				View - data Present UI Layer
+				controller - business logic/ Application logic
 
 
+- Round Trip  =  Request from Client + Response from database
 
+	Two type round trip Application and Hardware
+
+- Have two type of IP address 1. ipv4 2. ipv6
+
+Port No :- 1 to 65535
+- Reserve port are  1 to 1024
+- After reserve can use 1025 to 65535 can we for an application
+
+Q. Why we not use the Reserve port number?
+R. 
+
+Java --> JDBC(CONNECTED Through) --> MYSQL
+
+Ipaddress+ portno + dbname 
+172.68.24.67:3306/crm	
+    username+password
+	"root","root"
+
+-IP :- uniquely identify the given network
 
 
 
