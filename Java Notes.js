@@ -1317,8 +1317,62 @@ Q. What is fuctional interfce?
 R. Minimun and maximun abstract method that interface is fuctional interface
 
 Single tomn proxy obersrval
+
+********************************************* 10th April
+
+Q. What is Hetrogeneous Element
+R. As per array list it not restricted to the particular data type
+
+EX:- 
+	ArrayList al = new ArrayList<>()  --> Hetrogeneous element
+It work with all collection API
+
+
+Q. LIFO data structre
+R. Last In First out Stack 
+
+- To apply the condition in collection use the filter method
+
+For even number as kind of same can apply te condition for others
+	list.stream().filter(x -> x %2 ==0)
+		.forEach(x -> System.out.println(x));
+
+- To Convert array into list and apply the condition by using the stream 
+
+
+      int a[] = {45, 46, 24, 2 , 7, 25,4575,23,345};
 		
+		Arrays.stream(a)
+		.filter( s-> s%2 ==0 )
+		.filter(s -> s%5 ==0)
+		.forEach(s -> System.out.println(s));
+
+
+- To Convert the string into upper case by using stream api
+	ArrayList<String> list = new ArrayList<>();
+
+
+		list.add("good");
+		list.add("evening");
+		list.add("all");
+
+	
+	list.stream().map(String :: toUpperCase).forEach(s -> System.out.println(s));
 		
+
+
+Or else easy trick 
+list.stream().forEach(s -> System.out.println(s.toUpperCase()));
+
+
+
+
+- Convert Array into upper case by using the stream api
+
+String s[] = {"Hello" , "Hi" , "Bye"};
+
+Arrays.stream(s).forEach(n -> System.out.println(n.toUpperCase()));
+	
 
 
 
