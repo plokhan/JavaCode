@@ -1410,6 +1410,16 @@ Ipaddress+ portno + dbname
 
 -IP :- uniquely identify the given network
 
+************************************** 16 th April
+
+Data Base
+
+Driver is sepcific for DATA Base
+- First thing have to look for driver
+- To search the dive for mysql use the oracel
+
+
+
 
 
  
