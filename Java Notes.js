@@ -1419,6 +1419,85 @@ Driver is sepcific for DATA Base
 - To search the dive for mysql use the oracel
 
 
+*************************************************17 th April 
+
+Installtion of DataBase
+
+- To create data base commmand is 
+	create database dbnameofdatabase ;
+
+	usr dbnameofdatabase ;
+
+- To create table  command is 
+
+	create tabel product(id int PRIMARY KEY, name varchar(30) ,price decimal(10,2) ) ;
+
+
+- To describe the database
+	desc product ;
+
+- To see the data command is 
+
+	select * from product ;
+
+- To insert the data command is 
+
+	insert into product  (id ,name, price) values (101, 'pen' , 56.80) ;
+
+Note : - Primary key should unique(not repeated) and not null
+
+
+** Data Base to connect with Java 
+
+public class void main(String [] agrs) throws expection SQLException, ClassNotFoundException
+
+  Class.forName("com.mysql.cj.jdbc.Driver   path of mysql" );   --> should be correct 
+  String dbname= " dbnameofdatabase" ; 
+  String ur; = "jdb::mysql://localhost:3306/0" +dbnameofdatabase;   --> should be correct
+
+connection co = DriverManager.getconnection(url,username, password);  --> should be correct
+ if(con ! =null)
+   syso("connction Established.....");
+else
+
+	 syso("could not established");
+
+
+
+
+// select * from product have to fire from java to see the data 
+String query = "Select * from prduct" ;
+Statement stmt  = con.createStatement();
+stmt.executeQuery(query); --> to execute the query
+
+// to seee the data which is executd
+ResultSet  rs =  stmt.execute Query(query);
+// to see the data
+While (rs.next()){
+	syso(re.getInt("id")  +" "+ getString("name")+" " + getDouble("price"));
+
+}
+syso("Query is executed....");
+
+
+
+- If data want to covert into array 
+	ArrayList <Product> plist = new ArrayList<> ();
+
+while(rs.next())
+	plist.add(new Product(rs.getInt("id"), rs.getString("name"),rs.getDouble("price")));
+
+
+Only want to print price 
+
+plist.stream().forEach(s->syso(p.getprice()));
+
+- Calling between data base and control is called ORM
+ORM -  Object relational mapping
+
+
+
+
 
 
 
