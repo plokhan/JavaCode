@@ -1495,16 +1495,98 @@ plist.stream().forEach(s->syso(p.getprice()));
 - Calling between data base and control is called ORM
 ORM -  Object relational mapping
 
+******************************************** 18th April
+JDBC
+
+in mysql line command 
+
+- to create new data base use the command :- create database dbnameofdatabases ;   then entre
+- to see the all database use command :- show databases ;  then entre
+- to use the data base use command :- use dbnameofdatabase ;  then entre
+- to see the database table use command:- show tables ;  then entre
+- to create table in data base use command:-  create table nameoftable(id int PRIMARY KEY , name varchar(30) , course varchar(30)) ;  then entre
+
+	ex:- create table student(id int PRIMARY KEY , name varchar(30) , course varchar(30)) ;
+
+EX:- create table product(id int PRIMARY  KEY , name varchar(50) , price decimal(10,2)) ;  10 - 10 digit and after 2 digit in decimal
+
+Primary key is use for to maintain unique.
+
+- To see the data in database use command :- select * from student ; thenn entre
+
+	EX:-  select * from student ;
+| id  | name    | course |
++-----+---------+--------+
+| 101 | abhay   | ME     |
+| 102 | neha    | BE     |
+| 103 | aaditya | CE     |
+| 111 | aaditq  | ME     |
+| 112 | pragati | ME     |
++-----+---------+--------+
+
+- Particular for timestamps 
+
+
+	 create table product (id INT PRIMARY KEY, name varchar(10) , price decimal(10,2) , expdate date, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ) ;
+
+date format in :- YYYY-MM-DD
+
+
+	
+- To insert the data in  table use command :- insert into nameoftable(fieldsoftable) values(values of table) ; then entre 
+	
+	
+		ex:- insert into student(id , name , course) values (101, 'abhay','ME') ;
 
 
 
+- To exit the line commmand use command :-  exit entre
+
+- To  describe the tables use the command :- desc product ;  then entre
+-To see the particular data from databases
+
+  select   			 -> entre
+  name of particular dataname 	 -> entre
+  fromm				 -> entre
+dbdatabasename			 -> entre
+; 	-> entre
 
 
-
+EX: - mysql> select
+    -> id,name
+    -> from
+    -> product
+    -> ;
  
 
+- By using the where for condition
+
+EX:- 	mysql> select
+    ->          name
+    ->    from
+    -> product
+    ->         where
+    ->          price>40 ;
 
 
+mysql> select
+    -> name
+    -> from
+    -> product
+    -> where
+    -> price<50;
+
+- Sum fuction in mysql
+
+mysql> select
+    -> sum(salary)
+    -> from
+    -> employee;
++-------------+
+| sum(salary) |
++-------------+
+|   160000.00 |
++-------------+
 
 
 
