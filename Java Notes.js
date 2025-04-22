@@ -1589,6 +1589,38 @@ mysql> select
 +-------------+
 
 
+- To update in table and have to set use command
+
+	update employee set salary = salary + salary *0.10 where exp<20;
+
+
+
+mysql> update
+    -> employee
+    -> set
+    -> salary = salary - 21000
+    -> where
+    -> name='john';
+
+
+- To Delete the data from datatable  use the command
+
+
+mysql> delete
+    -> from
+    -> employee
+    -> where exp=21;
+it delete  with only data not the structure
+
+- To remove the column use the command
+
+	mysql> alter table
+    -> employee
+    -> drop column email;
+
+	It delete the with the structre
+
+
 
 
 
