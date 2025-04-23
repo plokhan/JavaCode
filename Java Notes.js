@@ -1620,6 +1620,12 @@ it delete  with only data not the structure
 
 	It delete the with the structre
 
+- Second highest salary 
+
+	 select MAX(salary) from employee where salary<(select MAX(salary) from employee)  ;
+
+Note: - mysql> select name from employee where age = (select MIN(age) from  employee) && salary = (select MAX(salary) from employee);
+
 
 
 
