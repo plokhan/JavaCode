@@ -1627,6 +1627,12 @@ it delete  with only data not the structure
 Note: - mysql> select name from employee where age = (select MIN(age) from  employee) && salary = (select MAX(salary) from employee);
 
 
+- Who is the employee witha start name with j
 
+mysql> select name from employee where name like'j%' ;
 
+Q.how many employee work in each department
+mysql> select department , count(*) from employee group by department ;
 
+Q.who are the top 5 highest paid employee ;
+		mysql> select * from employee order by salary desc limit 5;
