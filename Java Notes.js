@@ -1698,8 +1698,53 @@ This Code have to write to connect the db from java
 		 stmt.close();
 		 con.close();
 	}
-	
 
+
+***************************** 28 th April
+
+Shallow Copy 
+
+- Pointing towards the same change data is called shallow copy
+- In same object the changes has been held so we can get the same result for both object.
+
+	Student s1 = new Student (101 , "pankaj") ;
+        Student s2 = s1 ;
+
+	
+Deep Copy 
+
+Student s1 = new Student (101 , "pankaj") ;
+Student s2 = (student) s1.clone();
+
+- In deep, clone object has been created to changes the input data so we can get the different result for object. 
+- CloneNotSupportExpection throws, it is check expection
+
+Q. What is fuctional interface? Why?
+
+R. Only have one abstract method,To support lyamda expression
+
+Q. What is marker interface?
+R.  Is an interface that does not declare any methods or fields.
+
+
+	
+Q. What is optional Interface? why 
+R. Optional is a container object used to represent the presence or absence of a value.
+   To check on runtime null value.  Avoid NullPointerException errors.
+	
+Q. String tokenizer
+R. To breake the String 
+
+Q. Interning of String, What do you means by interning
+
+Q. What is try with resources, 
+
+Q. What is interlization
+R. 
+
+
+Q. Concerent Class?
+	
 
 
 
