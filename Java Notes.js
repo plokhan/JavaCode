@@ -1636,3 +1636,75 @@ mysql> select department , count(*) from employee group by department ;
 
 Q.who are the top 5 highest paid employee ;
 		mysql> select * from employee order by salary desc limit 5;
+
+
+
+************************************** 24th April
+
+JDBC Connection
+
+- To connect first have to find correct driver fro database
+
+	As per mysql version need the dependancy, it should be lower version as per the mysql version
+
+-Go TO mysql site to download the driver search mysql driver whichversion(8.0.33) and select the link mysql:download connector
+-Download the file in zip as per the mysql version or lower version of mysql by chosing palform independent in OS option
+-click on project in eclipse --> properties --> click on java build path --> libraries --> classpath -->Add External JAR's --> go to mysql unzip file which is download --> add the file mysql connector (.Executable Jar file  file type) -->open
+		--> Apply and close
+
+Then file will be vissible in eclipse in Referenced Libarires
+
+* Same proccess for other databases
+
+Note :- To import the interfaces in java use shortcut key cltr + shift + M
+
+
+This Code have to write to connect the db from java
+
+
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException  {
+		
+		
+	
+		
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		
+			System.out.println("driver Class is loaded in the memory... ");
+
+			// database detail
+			String dbname = "capgemini";
+			String url= "jdbc:mysql://localhost:3306/" +dbname;
+			String username ="root";
+			String password ="root";
+			
+			Connection con = DriverManager.getConnection(url , username, password);
+			if  (con != null)
+				System.out.println("Connection is Established....");
+		
+			String sql = "Select * from employee ";
+			
+		Statement stmt  = 	con.createStatement() ;
+		ResultSet rs = stmt.executeQuery(sql);
+		
+		while(rs.next()){
+		
+		 System.out.println(rs.getInt("id") +" " + rs.getString("name") + " " + rs.getDouble("Salary") +" " + rs.getString("Department") +" " + rs.getString("location"));
+			
+			
+		}
+		
+		
+		 stmt.close();
+		 con.close();
+	}
+	
+
+
+
+
+
+
+
+
+
