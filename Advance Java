@@ -5,3 +5,158 @@ R.It is a repositroy, project management tool, it hold dependency for all the ja
 
 Generating OR in Java by using java libarary
 
+***************************
+
+In Group id while creating Maven project com.  is a category name //domain 
+
+And Article id is a project name.
+
+
+******************* 2nd May
+
+What is Maven?
+Ans:- It is repository. It is project management tool so can hold the dependencies for required project.
+
+lombok :- it is clear the bolier plate code
+
+Q.What is bolier plate code?
+R.The same code repeatedly created.
+
+Generate the QR
+Download the library of geneerate the qr in pom.xml file
+
+For mysql driver version always take  less than the mysql version
+
+All dependencies jar is saved in .m2 
+
+ ex:- C:\Users\krishna\.m2\repository\org\hibernate\hibernate-core\5.6.0.Final\hibernate-core-5.6.0.Final.jar
+ 
+ ******************************5th May
+ Q.What is Hibernate
+ R. It is ORM framework
+ It act as a patch between databases and java classes
+ 
+ Q.What is ORM
+ R.
+ 
+ Folder Structure
+ hibernate.cfg.xml
+ 
+ @Entity:- corresponding with class the tabel has in databases if not in databases should have to create
+ 
+ @Id  :- It represent the PRIMARY KEY in databases
+ 
+ Running simple example
+ 
+ Bussiness Logic [Business Class ] also called as service layer
+ Model Class [Entity class]
+
+
+ _________________________________________________  --> Product Studennt Merchants --> Hibernated is more of Model Classes
+ 
+ DAO [Data Access Objects] :- connction with databases
+ ____________________________________________________
+ 
+ UI Classes
+ ____________________________________________________
+ DTO []
+ 
+ 
+ To Create tabel of so we use the Entity annotation. For this have to create file with hibernate.cfg.file
+ need DOCTYPE file search on goolge hibernate cfg git
+ And Copy the code in hibernate file.
+ 
+ 
+ -Directly use the below sessionFactory for creating session and configuration
+     SessionFactory sessionFactory  = new Configuration().configure().buildSessionFactory();
+		Here we create configuration object and with the help of config create the session
+	 
+- Session session = sessionFactor.openSsession();
+
+	 Boiler code :- To much code
+	 
+	 Do mapping in hibernate.cgf.xml  file and mention class name with fully qualified name (class name with package name)
+	   ex:- <mapping class=" com.ka.getconnection.entity.Student" />
+	 
+ @Entity :- use for create data tabel in databases
+ @Id :- use for mention PRIMARY KEY in databases
+ 
+ commit();  :- if operation is done then comit  it on databases
+ rollback(); :- if operation is not done then is rollback to pervious state
+ 
+ *************************6th May
+ 
+ HandsOn on hibernate
+
+Student s1 = new Student(102, "abhay", "ME");
+
+		Configuration cfg = new Configuration().configure();
+		//cfg.addAnnotatedClass(Student.class);
+		
+		
+		//Properties properties = cfg.getProperties();
+		// properties.forEach((x , y) -> System.out.println(x+"  " + y));   --> it should be neglible
+		
+		
+		SessionFactory sessionFacctory = cfg.buildSessionFactory();
+		Session session = sessionFacctory.openSession();
+		
+		Transaction tx= null;
+		
+		try {
+			tx =session.beginTransaction();
+			session.save(s1);
+			tx.commit();
+			
+			System.out.println("Transcation Successful.....");
+			
+		} catch (Exception e) {
+			tx.rollback();
+			e.printStackTrace();
+			
+			System.out.println("Transcation Unsuccessful ......");
+			=
+
+
+Can Do like this 
+
+SessionFactory sessionFacctory = new Configuration().configure().buildSessionFactory();
+		
+		Session session = sessionFacctory.openSession();
+		
+		Transaction tx= null;
+
+
+**********************************7th 	May
+
+Hibernate Annotations  
+Model 
+DAO(Accessing data via DAO)
+_____________________________________
+LLD:- Low Level Design
+HLD :- High Level Design 
+
+DAO  :- Data Access Object
+
+
+**********************************8 th May
+
+What is POJO
+Plain old java object 
+Variable private getter setter, close state, no extend
+
+Q. What is the role of toString
+R. It is represent the state of the object 
+
+		State means value of the variable
+		
+		
+Connection Pulling:- 
+	
+		It is reserve the connection from the give connection is called connection pulling.
+		With the session creatinig the connection and work with dtabases.
+
+
+		
+		
+
