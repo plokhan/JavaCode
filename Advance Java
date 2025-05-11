@@ -156,6 +156,20 @@ Connection Pulling:-
 		It is reserve the connection from the give connection is called connection pulling.
 		With the session creatinig the connection and work with dtabases.
 
+*************************************** 9th May
+
+Write all the annotation ied in hibernate?
+@Entity @Id
+
+Also Write methods of the session class/
+save 
+save or Update
+delete
+get
+
+
+
+
 
 		
 		
