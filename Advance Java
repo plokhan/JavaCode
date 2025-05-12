@@ -167,6 +167,24 @@ save or Update
 delete
 get
 
+**********************************12th May
+
+What is dialect?
+A dialect is a configuration setting 
+that helps the ORM framework understand the specifics of a particular database system
+
+What is session Factory?
+Create a session 
+
+Alternative ORMs instead of ORM?
+MyBaties, apache openJPA
+
+What is the advantage of hibernate?
+1. Map java object to the entity tables --> primary advantage
+2. frame work manage the relationship between the object and relation
+3.reduce bolierplate code
+4.improve the performance of application
+
 
 
 
