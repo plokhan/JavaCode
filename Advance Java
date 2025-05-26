@@ -216,6 +216,21 @@ Mapping
 To insert the data into existing table in databses --> use the --> @Table (name= "tableName");
 To insert the varibale into particular column mention --> annotation --> @Column(name = "nameOfColumn") above the varibale
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "stud")
+public class Student {
+	@Id
+	@Column(name = "sid")
+	int id;
+	@Column(name = "sname")
+	String name;
+	@Column(name = "scourse")
+	String course;
+
+
 
 
 
