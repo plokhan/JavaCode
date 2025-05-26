@@ -184,13 +184,37 @@ What is the advantage of hibernate?
 2. frame work manage the relationship between the object and relation
 3.reduce bolierplate code
 4.improve the performance of application
+************************************16th May
+OneToOne
+Use the annotiation @OneToOne when Mapping is onetoone
+@Id
+	int eid;
+	String firstname;
+	LocalDate jdate;
+	
+	@OneToOne
+	AadharCard aadharcard;
+	@OneToOne
+	PassPort passport;
 
 
 *************************************** 22nd May
 
 Mapping 
 
-OneToMany
+When condition is OneToMany use the @OneToMany annotation 
+int did;
+	String dname;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "Deptid")
+	List<Employee> emp;
+	
+
+****************************************23rd May
+Mapping
+
+To insert the data into existing table in databses --> use the --> @Table (name= "tableName");
+To insert the varibale into particular column mention --> annotation --> @Column(name = "nameOfColumn") above the varibale
 
 
 
