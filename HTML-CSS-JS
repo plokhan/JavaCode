@@ -8,3 +8,51 @@ HTML --> Hyper text markup language
 CSS --> Cascading style sheet
 
 JS--> Java Script
+
+
+
+************************29th MAY
+For Tabel
+
+day03.css
+
+table{
+
+  border:2px solid black;
+
+  border-collapse : collapse; //To collabs the broder
+
+  margin-left : 40%;
+  margin-bottom : 20%;
+
+  padding:10px;
+}
+
+Interview Question
+Q.Margin padding rule?
+
+1 value : all sides
+
+2 vlaue :top-bottom | right-left
+
+3 value : top | right -left | bottom
+
+4 value : top | right | bottom | left
+
+margin is used to outside item to adjust
+Padding for internal item to adjust
+
+-Achor tag
+Nothing but just clickable text
+<a herf="hhtps://thekiranacademy.com">Vist to TKA </a> -- it open n same tag
+To oepn in next tab
+<a herf="htps://thekiranacademy.com" target= "blank">Vist to TKA </a>
+<a herf="day02.html" target= "blank">Vist to TKA </a>  -- it can open the file  also after click
+
+<br> -- for next line
+
+It can use as like button
+
+
+
+
