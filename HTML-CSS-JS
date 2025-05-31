@@ -10,10 +10,12 @@ CSS --> Cascading style sheet
 JS--> Java Script
 
 *********************28th MAY
+form tag, input, anchor tag, attributes, table, th , tr, td, 
+css : margin padding rule, border, border-collapseetc.
+how to use free templates
 
 
-
-************************29th MAY
+************************28th MAY
 For Tabel
 
 day03.css
@@ -54,6 +56,163 @@ To oepn in next tab
 <br> -- for next line
 
 It can use as like button
+
+
+*****************************29th MAY
+BootStrap,OL,UL,select, iframe, image tag
+
+- Order List
+    <ol>                          --> order list show sin number by default
+        <li>Mango</li>            
+        <li>Banana</li>
+        <li>Grapse</li>
+        <li>Kivi</li>
+    </ol>
+
+
+ <ol type ="A" >                          --> order list show in alphabatical order by (it can be shows as small alphabetical order, roman(i) )
+        <li>Mango</li>            
+        <li>Banana</li>
+        <li>Grapse</li>
+        <li>Kivi</li>
+    </ol>
+
+-Unorder List
+
+ <ul>                          --> unorder list shows in bullet point by defualt 
+        <li>Mango</li>            
+        <li>Banana</li>
+        <li>Grapse</li>
+        <li>Kivi</li>
+    </ul>
+
+    to change the particular css then 
+
+  ul li{
+color : red
+  }
+
+if having id for list then
+
+ <ul id = "fruit">                          --> unorder list shows in square point  
+        <li>Mango</li>            
+        <li>Banana</li>
+        <li>Grapse</li>
+        <li>Kivi</li>
+    </ul>
+
+#fruit li{
+
+color :red;
+list-style : sqaure;
+}
+
+- Select tag
+
+select tag is a drop down menu. It is parent tag
+
+<select>
+  <option> MI</option>
+<option selected> CSK</option>   --> selected attribute shows as CSK as first selected option 
+<option> GT</option>
+<option> KKR</option>
+
+</select>
+
+- TO select multiple option 
+
+<select mutiple>
+  <option> MI</option>
+<option selected> CSK</option>    
+<option> GT</option>
+<option> KKR</option>
+
+</select>
+
+so we can select mutiple option 
+
+
+- If want to see 3 option
+
+<select mutiple size="3">
+  <option> MI</option>
+<option selected> CSK</option>    
+<option> GT</option>
+<option> KKR</option>
+
+</select>
+
+If want to disabled to option but not delete the option
+
+
+<select mutiple size="3">
+  <option> MI</option>
+<option selected> CSK</option>    
+<option> GT</option>
+<option disabled> KKR</option>
+
+</select>
+
+To generate different option
+
+<select>
+<optgroup label ="Major citie>
+<option >Pune</option>
+<option >Delhi</option>
+<option >Banglore</option>
+<option >Hyderabad</option>
+</optgroup>
+                                                --> this is shown as first shows major cities under that shows option and All cities under shows option
+<optiongroup label ="All cities">
+<option>Amravati</option>
+<option>Bhed</option>
+<option>Chandrapur</option>
+<option>Darypur</option>
+</optgroup>
+
+</select>
+
+- Image tag  
+
+Image tag is used for to show the image 
+
+<img src= "samsung s4ultra.png" alt="samsung image" >  --> alt is use for alternate message (if image crash the show the message samsunng image)
+
+To manage the size of image
+ img{
+height: 450px;
+width:650px;
+margin-left :40%;
+box-shadow: 10px 50px 5px 20px black;  -> 1st value : left to right
+                                          2nd value  : up to down
+                                          3rd value : bacjground blur
+                                          4th value : background dark
+ }
+
+- Bootstrap
+To apply the bootstrap we have to  attach the CDN link in link tag for html
+
+- iframe
+
+to show the other frame in the project 
+<iframe src= "http://thekiranacademy.com/" frameborder="0"></iframe> --> so in the website able to seee the kiranacademy website
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
