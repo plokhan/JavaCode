@@ -204,6 +204,36 @@ to show the other frame in the project
 Javascript:- Js is basic scripting langugae which is used to acheive logical things for webpage
 
 
+***************************2nd June
+Control Statement
+
+1.if else
+2.for loop
+for for loop need array
+
+how many type of for loop
+ * simple for/ traditional for 
+
+for(i=0 ; i<fruits.lenght; i++){
+consloe.log(fruits[])
+}
+it print the element as per the i value
+
+* for in  loop
+
+for(r in fruits){             it automatically increase the index vlaue (r) value          
+                              
+console.log(fruits[r])
+}
+
+* for of loop --> if concern with values, deals with values
+
+for (r of loop){
+
+console.log(r)
+}
+
+
 
 
 
