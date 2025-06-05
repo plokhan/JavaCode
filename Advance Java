@@ -235,6 +235,26 @@ public class Student {
 
 
 
+***********************5th June
+Hibernate Performance Tunning
+
+Q.What is performance tunning/
+R.Not to hit unneccesary hit to databases, using the laod method 
+
+session.load(Person.class , id);
+
+If we use the get method then it will give the query if method is not use
+For load if we not use the method then not give the load, & As well use the method then load method gives the query.
+person = session.load(Person.class , id);
+syso(person);
+
+- get do eger loading and load do lazy loading
+
+INTERVIEW QUESTION --> Difference Between load and get method in hibernate?
+
+-Hitting Databases.... How to optimize
+
+
 
 
 
