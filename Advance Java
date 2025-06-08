@@ -254,6 +254,40 @@ INTERVIEW QUESTION --> Difference Between load and get method in hibernate?
 
 -Hitting Databases.... How to optimize
 
+*************************************6th June
+
+Demonstrating loading in Hibernate
+----------------------------------
+
+Student s1 = new Student (101, "Abhay" , "ME")  -- TRANSIENT STATE
+session.save(s1)  ---> This state is PERSISTANT STATE 
+If session is not connnect with databases and coming out from TRANSIENT STATE then it is  --> DETACHED STATE	
+
+Student s1 = new Student(101, "abhay" , "ME" , 7.9f);  --> This is a  TRANSIENT STATE
+|
+|
+try{
+tx = session.beginTransaction();
+session.save(s1);  
+s1.setCgpa(8.9);  -->This is a PERSISTANT STATE 
+tx.commit();
+}catch{
+tx.rollback();
+e.printStackTrace();
+}
+
+s1.setCgpa(9.2) ; --> This is a DETACHED STATE
+}
+
+______________________________________________
+OneToMany(cascade = CascadeType.All, fetch = FetchType.LAZY)   --> It do lazy loading(If needed then will run the query)
+OneToMany(cascade = CascadeType.All, fetch = FetchType.EAGER)  --> if fetch the query if no need of data
+For default EAGR loading and for OneToMany LAZY loading
+
+List Concurrent collection Classes in Java?
+
+What is Java?
+
 
 
 
