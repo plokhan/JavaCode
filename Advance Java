@@ -300,6 +300,9 @@ DAO :- Data	      object
 
 ******************************10th June
 
+What is the use of @GeneratedValue(strategy = GenerationType.IDENTITY) ?
+Ans :- Basically it Create it's own id if we not give the id, and if we give the id then it follow the given id.
+
 
 
 
