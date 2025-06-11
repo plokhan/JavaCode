@@ -303,6 +303,61 @@ DAO :- Data	      object
 What is the use of @GeneratedValue(strategy = GenerationType.IDENTITY) ?
 Ans :- Basically it Create it's own id if we not give the id, and if we give the id then it follow the given id.
 
+*******************************11th June
+Criteria Query
+-------------------------------
+try{
+tx = session.begintransaction();
+Criteria criteria = session.createCriteria(ClassName.class);
+criteria.add(Restrictions.between("salary" , 5000.00 , 9000.00));
+criteria.add(Restrictions.get("exp" , 10));
+criteria.add(Restrictions.eq("city" , "Pune"));
+
+ List list = criteria.list();
+list.forEach(x -> syso(x));
+
+tx.commit();
+}
+
+
+Example :- 
+
+SessionFactory factory = new Configuration().configure().buildSessionFactory();
+
+		Session session = factory.openSession();
+
+		Transaction tx = null;
+
+		try {
+			tx = session.beginTransaction();
+
+			// Normal Query Creation
+			 String hql = "from Product";
+			 Query<Product> query = session.createQuery(hql , Product.class);
+			List<Product> list2 = query.list();
+			list2.forEach(x -> System.out.println(x));
+			
+			System.out.println("Here All Data ..........");
+			
+			System.out.println("__________________________");
+
+			// Using Criteria Query 
+			Criteria criteria = session.createCriteria(Product.class);
+			criteria.add(Restrictions.eq("category", "stationary"));   --> Condition as per requirement
+			criteria.add(Restrictions.le("price",179.00 ));		   --> Condition as per requirement
+			List list = criteria.list();
+			list.forEach(x -> System.out.println(x));
+
+			tx.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			tx.rollback();
+		}
+	}
+
+
+
+
 
 
 
