@@ -355,6 +355,24 @@ SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		}
 	}
 
+*********************************12th June
+DTO criteria together
+------------------------------
+
+try {
+		tx = session.beginTransaction();
+		
+		CriteriaBuilder cb = session.getCriteriaBuilder(); --> build the criteria builder
+		
+		CriteriaQuery<EmployeeInfoDTO> cq = cb.createQuery(EmployeeInfoDTO.class);  --> create the query for that class from which data we want
+		Root<Employee> root = cq.from(Employee.class);				    --> taking the data from the which class we want  
+		
+		cq.select(cb.construct(EmployeeInfoDTO.class, root.get("name"), root.get("role"), root.get("city")));  --> here is the which data we want for which class
+		
+		List<EmployeeInfoDTO> list = session.createQuery(cq).list(); --> here create query for which class we want in a list
+		list.forEach(emp -> System.out.println(emp)); --> print the data from the class
+		tx.commit();
+
 
 
 
