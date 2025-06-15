@@ -373,6 +373,25 @@ try {
 		list.forEach(emp -> System.out.println(emp)); --> print the data from the class
 		tx.commit();
 
+**************************************13th June
+Second Level Cache
+-----------------------------
+To integrate n number of caches tool
+1. Ehcache
+2.Infinispan
+3.Hazelcast
+4.Oscache
+5.Jcache
+6.Jboss cache
+7.Redis
+8.Caffeile
+9.apache ignite
+
+To Install it have to add the dependency
+And have to add configuaration in hibernatecfg.xml file
+
+
+
 
 
 
